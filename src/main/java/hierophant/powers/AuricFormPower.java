@@ -1,10 +1,9 @@
 package hierophant.powers;
 
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -69,9 +68,9 @@ public class AuricFormPower extends AbstractPower implements CloneablePowerInter
         AbstractPlayer p = AbstractDungeon.player;
         p.loseGold(goldToLose);
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
-                new FervorPower(p, p, goldToLose / 2), goldToLose / 2));
-    }           new PietyPower (p, p, goldToLose /2), goldToLose / 2);
-
+               new FervorPower(p, p, goldToLose / 2), goldToLose / 2));
+            new PietyPower (p, p, goldToLose / 2);
+    }
     @Override
     public void updateDescription() {
         description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];

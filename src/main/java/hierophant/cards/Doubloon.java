@@ -71,7 +71,7 @@ public class Doubloon extends AbstractDynamicCard {
 
         AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, DRAW));
         if (!this.upgraded) {
-            p.loseGold(4)
+            p.loseGold(4);
         }
     }
 
@@ -79,7 +79,7 @@ public class Doubloon extends AbstractDynamicCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.rawDescription = UPGRADE_DESCRIPTION;
+            this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
             this.initializeDescription();
         }
     }

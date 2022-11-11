@@ -10,7 +10,6 @@ import hierophant.HierophantMod;
 import hierophant.characters.Hierophant;
 
 import static hierophant.HierophantMod.makeCardPath;
-import basemod.helpers.BaseModCardTags;
 
 
 public class Strike_Hierophant extends AbstractDynamicCard {
@@ -32,7 +31,6 @@ public class Strike_Hierophant extends AbstractDynamicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
         tags.add(CardTags.STRIKE);
-        this.tags.add(BaseModCardTags.BASIC_STRIKE);
     }
 
     @Override

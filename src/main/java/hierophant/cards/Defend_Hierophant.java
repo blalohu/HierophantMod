@@ -8,7 +8,6 @@ import hierophant.HierophantMod;
 import hierophant.characters.Hierophant;
 
 import static hierophant.HierophantMod.makeCardPath;
-import basemod.helpers.BaseModCardTags;
 
 
 public class Defend_Hierophant extends AbstractDynamicCard {
@@ -26,7 +25,6 @@ public class Defend_Hierophant extends AbstractDynamicCard {
     public Defend_Hierophant() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         this.baseBlock = 5;
-        this.tags.add(BaseModCardTags.BASIC_DEFEND);
     }
 
     @Override
