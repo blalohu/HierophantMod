@@ -29,8 +29,8 @@ public class Alms extends AbstractDynamicCard {
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = Hierophant.Enums.COLOR_GOLD;
 
-    private static final int COST = 1;
-    private static final int UPGRADED_COST = 0;
+    private static final int COST = 0;
+
 
     public Alms() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
@@ -46,14 +46,16 @@ public class Alms extends AbstractDynamicCard {
             draw += c.costForTurn > 0 ? c.costForTurn : 0;
         }
         AbstractDungeon.actionManager.addToTop(new DrawCardAction(p, draw));
-        AbstractDungeon.actionManager.addToTop(new DiscardAction(p, p, count, true));
+       if (!this.upgraded) {
+           AbstractDungeon.actionManager.addToTop(new DiscardAction(p, p, count, true));
+       }
     }
 
     @Override
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeBaseCost(UPGRADED_COST);
+            this.rawDescription = UPGRADE_DESCRIPTION;
         }
     }
 }

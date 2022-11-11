@@ -16,7 +16,7 @@
     "NAMES": [
       "tithe"
     ],
-    "DESCRIPTION": "When your energy is insufficient, can be partially paid with gold at a rate of #b10 gold per missing Energy."
+    "DESCRIPTION": "When your energy is insufficient, can be partially paid with gold at a rate of #b15 gold per missing Energy."
   },
   {
     "NAMES": [
@@ -40,7 +40,7 @@
     "NAMES": [
       "piety"
     ],
-    "DESCRIPTION": "At the end of your turn, defeat ANY enemies with HP equal or lower than your #bPiety and lose a third of your #bPiety."
+    "DESCRIPTION": "At the end of your turn, defeat ANY enemies with HP equal or lower than your #bPiety and lose half of your #bPiety."
   },
   {
     "PROPER_NAME": "Multiword Keyword",

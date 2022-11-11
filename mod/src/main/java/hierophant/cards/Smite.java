@@ -46,7 +46,7 @@ public class Smite extends AbstractDynamicCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        int combinedDamage = piety + HierophantMod.pietyGainedThisTurn;
+        int combinedDamage = (piety + HierophantMod.pietyGainedThisTurn) / 2;
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
                 new PietyPower(p, p, piety), piety));
 
