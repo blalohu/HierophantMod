@@ -29,7 +29,7 @@ public class RecallFunds extends AbstractDynamicCard {
     public static final CardColor COLOR = Hierophant.Enums.COLOR_GOLD;
 
     private static final int COST = 1;
-    //private static final int UPGRADED_COST = 1;
+    private static final int UPGRADED_COST = 1;
     private static final int MAGIC = 3;
     private static final int UPGRADE_PLUS_MAGIC = 2;
 

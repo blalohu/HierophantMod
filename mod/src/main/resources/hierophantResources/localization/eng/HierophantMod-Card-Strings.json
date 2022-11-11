@@ -9,7 +9,7 @@
     "UPGRADE_DESCRIPTION": "Draw 1 Card. NL Exhaust. NL hierophant:Hoard !M!."
   },
   "hierophant:DivineIntervention": {
-    "NAME": "Divine Intervention",
+    "NAME": "Divine intervention",
     "DESCRIPTION": "Heal an enemy !M! HP. NL Gain 2 hierophant:Piety per HP healed."
   },
   "hierophant:Strike_Hierophant": {
@@ -137,7 +137,8 @@
   },
   "hierophant:Levitation": {
     "NAME":"Levitation",
-    "DESCRIPTION": "Gain !M! Intangible. NL Exhaust. NL hierophant:Tithe."
+    "DESCRIPTION": "Gain 1 Intangible. NL Exhaust. NL hierophant:Tithe.",
+    "UPGRADE_DESCRIPTION": "Gain 1 Intangible. NL hierophant:Tithe."
   },
   "hierophant:TollTheBells": {
     "NAME":"Toll The Bells",
@@ -153,8 +154,7 @@
   },
   "hierophant:Alms": {
     "NAME":"Alms",
-    "DESCRIPTION": "Discard your hand, then draw cards equal to the combined cost discarded. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Draw cards equal to the combined cost of your hand. NL Exhaust."
+    "DESCRIPTION": "Discard your hand, then draw cards equal to the combined cost discarded. NL Exhaust."
   },
   "hierophant:Martyrdom": {
     "NAME":"Martyrdom",
@@ -238,7 +238,7 @@
   },
   "hierophant:SolarFlare": {
     "NAME":"Solar Flare",
-    "DESCRIPTION": "Gain Block equal to twice your hierophant:Fervor. NL Deal !D! damage. NL hierophant:Tithe."
+    "DESCRIPTION": "Gain Block equal to your hierophant:Fervor. NL Deal !D! damage. NL hierophant:Tithe."
   },
   "hierophant:LocustPlague": {
     "NAME":"Locust Plague",
@@ -258,7 +258,7 @@
   },
   "hierophant:WrathOfGod": {
     "NAME":"Wrath Of God",
-    "DESCRIPTION": "Deal !D! damage to all enemies and a fifth (!M!) to you. NL hierophant:Tithe."
+    "DESCRIPTION": "Deal !D! damage to all enemies and a fifth ( !M! ) to you. NL hierophant:Tithe."
   },
   "hierophant:Zeal": {
     "NAME":"Zeal",
@@ -274,7 +274,7 @@
   },
   "hierophant:Smite": {
     "NAME":"Smite",
-    "DESCRIPTION": "Gain !hierophant:P! hierophant:Piety. NL Deal damage equal to half the hierophant:Piety gained this turn.",
+    "DESCRIPTION": "Gain !hierophant:P! hierophant:Piety. NL Deal damage equal to the hierophant:Piety gained this turn.",
     "UPGRADE_DESCRIPTION": " NL (Deals !D! damage.)"
   },
   "hierophant:Upheaval": {
@@ -339,7 +339,7 @@
   },
   "hierophant:AuricShield": {
     "NAME":"Auric Shield",
-    "DESCRIPTION": "Gain Block equal to !M! % of your Gold.",
+    "DESCRIPTION": "Gain Block equal to !M!% of your Gold.",
     "EXTENDED_DESCRIPTION": [
        " NL (Gains !B! Block.)"
     ]
