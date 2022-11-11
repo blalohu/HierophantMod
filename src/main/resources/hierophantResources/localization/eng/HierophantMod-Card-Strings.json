@@ -308,7 +308,7 @@
   },
   "hierophant:DeathKnell": {
     "NAME":"Death Knell",
-    "DESCRIPTION": "Your Attacks deal no damage for !M! turns. NL After !M! turns, gain 40 hierophant:Fervor."
+    "DESCRIPTION": "Your Attacks deal no damage for 2 turns. NL After 2 turns, gain !M! hierophant:Fervor."
   },
   "hierophant:Empathy": {
     "NAME":"Empathy",
