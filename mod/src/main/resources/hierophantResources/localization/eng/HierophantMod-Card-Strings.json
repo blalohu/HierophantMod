@@ -5,7 +5,8 @@
   },
   "hierophant:Doubloon": {
     "NAME": "Doubloon",
-    "DESCRIPTION": "Draw 1 card. NL Exhaust. NL hierophant:Hoard !M!."
+    "DESCRIPTION": "Draw 1 card. NL Lose 4 Gold NL Exhaust. NL hierophant:Hoard !M!.",
+    "UPGRADE_DESCRIPTION": "Draw 1 Card. NL Exhaust. NL hierophant:Hoard !M!."
   },
   "hierophant:DivineIntervention": {
     "NAME": "Divine intervention",

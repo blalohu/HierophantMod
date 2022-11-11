@@ -71,13 +71,17 @@ public class Doubloon extends AbstractDynamicCard {
         }
 
         AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, DRAW));
+        if (!this.upgraded) {
+            p.loseGold(4)
+        }
     }
 
     @Override
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeMagicNumber(UPGRADE_PLUS_MAGIC);
+            this.rawDescription = UPGRADE_DESCRIPTION;
+            this.initializeDescription();
         }
     }
 }
