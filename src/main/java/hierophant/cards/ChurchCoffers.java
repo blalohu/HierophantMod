@@ -1,13 +1,13 @@
 
 package hierophant.cards;
 
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import hierophant.HierophantMod;
 import hierophant.characters.Hierophant;
 
@@ -45,12 +45,13 @@ public class ChurchCoffers extends AbstractTitheCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         payTithe();
-        if (this.upgraded) {
-            AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(3));
+        /*if (this.upgraded) {
+            AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(2));
         }
         else {
             AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(2));
-        }
+        }*/
+        AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(2));
         AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, this.magicNumber));
     }
 
