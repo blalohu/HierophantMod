@@ -1,8 +1,6 @@
 package hierophant.powers;
 
-import static hierophant.HierophantMod.makePowerPath;
-import static java.lang.Math.ceil;
-
+import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -16,18 +14,17 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.vfx.combat.FlameParticleEffect;
-
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
-import basemod.interfaces.CloneablePowerInterface;
 import hierophant.HierophantMod;
 import hierophant.cards.FieryStrike;
 import hierophant.cards.FlamingChariot;
 import hierophant.cards.ThreeLashes;
 import hierophant.effects.FervorFlameEffect;
 import hierophant.util.TextureLoader;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import static hierophant.HierophantMod.makePowerPath;
+import static java.lang.Math.ceil;
 
 public class FervorPower extends AbstractPower implements CloneablePowerInterface {
     public static final Logger logger = LogManager.getLogger(HierophantMod.class.getName());
@@ -78,7 +75,7 @@ public class FervorPower extends AbstractPower implements CloneablePowerInterfac
     public float atDamageGive(float damage, DamageInfo.DamageType type)
     {
         if (type == DamageInfo.DamageType.NORMAL) {
-            return (float) ceil(damage * (this.amount * 10 + 100)) / 100;
+            return (float) ceil(damage * (this.amount * 12.5 + 100)) / 100;
         }
         return damage;
     }
