@@ -1,8 +1,6 @@
 package hierophant.powers;
 
-import static hierophant.HierophantMod.makePowerPath;
-import static java.lang.Math.ceil;
-
+import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -17,14 +15,14 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
-import basemod.interfaces.CloneablePowerInterface;
 import hierophant.HierophantMod;
 import hierophant.actions.PietyDefeatAction;
 import hierophant.util.TextureLoader;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import static hierophant.HierophantMod.makePowerPath;
+import static java.lang.Math.ceil;
 
 // Defeat any enemies with lower or equal HP than your Piety at end of turn.
 public class PietyPower extends AbstractPower implements CloneablePowerInterface {
@@ -40,7 +38,7 @@ public class PietyPower extends AbstractPower implements CloneablePowerInterface
     private static final Texture tex84 = TextureLoader.getTexture(makePowerPath("piety_big.png"));
     private static final Texture tex32 = TextureLoader.getTexture(makePowerPath("piety_small.png"));
 
-    public static final int REDUCTION_FACTOR = 2;
+    public static final int REDUCTION_FACTOR = 3;
 
     public PietyPower(final AbstractCreature owner, final AbstractCreature source, final int amount) {
         name = NAME;
