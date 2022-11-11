@@ -29,7 +29,8 @@ public class ChurchCoffers extends AbstractTitheCard {
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = Hierophant.Enums.COLOR_GOLD;
 
-    private static final int COST = 2;
+    private static final int COST = 3;
+    private static final int UPGRADED_COST = 4;
     private static final int MAGIC = 2;
 
     // /STAT DECLARATION/
@@ -45,7 +46,9 @@ public class ChurchCoffers extends AbstractTitheCard {
         payTithe();
         if (this.upgraded) {
             AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(3));
-        } else {
+            upgradeBaseCost(UPGRADED_COST);
+        }
+        else {
             AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(2));
         }
         AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, this.magicNumber));

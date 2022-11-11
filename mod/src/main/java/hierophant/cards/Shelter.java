@@ -28,10 +28,10 @@ public class Shelter extends AbstractDynamicCard {
     public static final CardColor COLOR = Hierophant.Enums.COLOR_GOLD;
 
     private static final int COST = 1;
-    private static final int BLOCK = 10;
-    private static final int UPGRADE_PLUS_BLOCK = 5;
-    private static final int MAGIC = 10;
-    private static final int UPGRADE_PLUS_MAGIC = 5;
+    private static final int BLOCK = 8;
+    private static final int UPGRADE_PLUS_BLOCK = 4;
+    private static final int MAGIC = 8;
+    private static final int UPGRADE_PLUS_MAGIC = 4;
 
     public Shelter() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);

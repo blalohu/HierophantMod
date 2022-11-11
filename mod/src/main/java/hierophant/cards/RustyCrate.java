@@ -29,8 +29,8 @@ public class RustyCrate extends AbstractDynamicCard {
     public static final CardColor COLOR = Hierophant.Enums.COLOR_GOLD;
 
     private static final int COST = -2;
-    private static final int MAGIC = 5;
-    private static final int UPGRADE_PLUS_MAGIC = 5;
+    private static final int MAGIC = 8;
+    private static final int UPGRADE_PLUS_MAGIC = 8;
 
     // /STAT DECLARATION/
     public RustyCrate() {
