@@ -39,7 +39,7 @@ public class Levitation extends AbstractTitheCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         payTithe();
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new IntangiblePlayerPower(p, this.magicNumber), this.magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new IntangiblePlayerPower(p, this.magicNumber)));
 }
 
     @Override

@@ -38,7 +38,7 @@ public class PietyPower extends AbstractPower implements CloneablePowerInterface
     private static final Texture tex84 = TextureLoader.getTexture(makePowerPath("piety_big.png"));
     private static final Texture tex32 = TextureLoader.getTexture(makePowerPath("piety_small.png"));
 
-    public static final int REDUCTION_FACTOR = 3;
+    public static final int REDUCTION_FACTOR = 2;
 
     public PietyPower(final AbstractCreature owner, final AbstractCreature source, final int amount) {
         name = NAME;

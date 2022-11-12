@@ -69,8 +69,8 @@
   },
   "hierophant:ChurchCoffers": {
     "NAME": "Church Coffers",
-    "DESCRIPTION": "Draw !M! cards. NL Gain [E] [E]. NL hierophant:Tithe.",
-    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL Gain [E] [E] [E]. NL hierophant:Tithe."
+    "DESCRIPTION": "Draw !M! cards. NL Gain [E] . NL hierophant:Tithe.",
+    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL Gain [E] [E]. NL hierophant:Tithe."
   },
   "hierophant:Invocation": {
     "NAME": "Invocation",
@@ -258,7 +258,7 @@
   },
   "hierophant:WrathOfGod": {
     "NAME":"Wrath Of God",
-    "DESCRIPTION": "Deal !D! damage to all enemies and a fifth (!M!) to you. NL hierophant:Tithe."
+    "DESCRIPTION": "Deal !D! damage to all enemies and a fifth NL ( !M! ) to you. NL hierophant:Tithe."
   },
   "hierophant:Zeal": {
     "NAME":"Zeal",
