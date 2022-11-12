@@ -33,9 +33,9 @@ public class Embezzle extends AbstractDynamicCard {
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = Hierophant.Enums.COLOR_GOLD;
 
-    private static final int COST = 0;
-    private static final int MAGIC = 40;
-    private static final int UPGRADE_PLUS_MAGIC = 20;
+    private static final int COST = 1;
+    private static final int MAGIC = 60;
+    private static final int UPGRADE_PLUS_MAGIC = 30;
 
     public Embezzle() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);

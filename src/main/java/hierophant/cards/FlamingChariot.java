@@ -1,7 +1,6 @@
 package hierophant.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -24,8 +23,8 @@ public class FlamingChariot extends AbstractDynamicCard {
 
     private static final int COST = 2;
 
-    private static final int DAMAGE = 15;
-    private static final int UPGRADE_PLUS_DMG = 7;
+    private static final int DAMAGE = 12;
+    private static final int UPGRADE_PLUS_DMG = 6;
     private static final int MAGIC = 1;
     public FlamingChariot() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);

@@ -102,7 +102,7 @@ public class FervorPower extends AbstractPower implements CloneablePowerInterfac
 
     @Override
     public void updateDescription() {
-        description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
+        description = DESCRIPTIONS[0] + amount * 12.5 + DESCRIPTIONS[1];
     }
 
     @Override
