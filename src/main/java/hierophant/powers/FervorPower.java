@@ -60,7 +60,6 @@ public class FervorPower extends AbstractPower implements CloneablePowerInterfac
     {
         this.fontScale = 8.0F;
         this.amount += stackAmount;
-        updateDescription();
         if (this.amount == 0) {
             AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, POWER_ID));
         }
@@ -103,7 +102,7 @@ public class FervorPower extends AbstractPower implements CloneablePowerInterfac
 
     @Override
     public void updateDescription() {
-        description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
+        description = DESCRIPTIONS[0] + amount * 12.5 + DESCRIPTIONS[1];
     }
 
     @Override
