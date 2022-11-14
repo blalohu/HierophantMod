@@ -40,7 +40,7 @@
     "NAMES": [
       "piety"
     ],
-    "DESCRIPTION": "At the end of your turn, defeat ANY enemies with HP equal or lower than your #bPiety and lose half of your #bPiety."
+    "DESCRIPTION": "At the end of your turn, defeat ANY enemies with HP equal or lower than your #bPiety and lose one third of your #bPiety."
   },
   {
     "PROPER_NAME": "Multiword Keyword",
