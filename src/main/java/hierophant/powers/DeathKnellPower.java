@@ -15,7 +15,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.AbstractPower.PowerType;
 import hierophant.HierophantMod;
 import hierophant.util.TextureLoader;
 import org.apache.logging.log4j.LogManager;
@@ -38,7 +37,7 @@ public class DeathKnellPower extends AbstractPower implements CloneablePowerInte
         this.owner = owner;
         this.amount = amount;
         this.upgraded = upgraded;
-        this.fervor = upgraded ? 60 : 40;
+        this.fervor = upgraded ? 45 : 30;
         this.type = PowerType.BUFF;
         this.isTurnBased = true;
         this.region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);

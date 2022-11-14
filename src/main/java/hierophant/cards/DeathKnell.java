@@ -2,9 +2,6 @@ package hierophant.cards;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.AbstractCard.CardRarity;
-import com.megacrit.cardcrawl.cards.AbstractCard.CardTarget;
-import com.megacrit.cardcrawl.cards.AbstractCard.CardType;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -25,12 +22,12 @@ public class DeathKnell extends AbstractDynamicCard {
     private static final AbstractCard.CardType TYPE;
     public static final AbstractCard.CardColor COLOR;
     private static final int COST = 1;
-    private static final int MAGIC = 40;
-    private static final int UPGRADE_PLUS_MAGIC = 20;
+    private static final int MAGIC = 30;
+    private static final int UPGRADE_PLUS_MAGIC = 15;
 
     public DeathKnell() {
         super(ID, IMG, 1, TYPE, COLOR, RARITY, TARGET);
-        this.magicNumber = this.baseMagicNumber = 40;
+        this.magicNumber = this.baseMagicNumber = 30;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -40,7 +37,7 @@ public class DeathKnell extends AbstractDynamicCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeMagicNumber(20);
+            this.upgradeMagicNumber(15);
         }
 
     }
