@@ -1,9 +1,9 @@
 package hierophant.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -14,6 +14,7 @@ import hierophant.characters.Hierophant;
 import hierophant.powers.FervorPower;
 
 import static hierophant.HierophantMod.makeCardPath;
+import static java.lang.Math.ceil;
 
 public class SolarFlare extends AbstractTitheCard {
 
@@ -26,12 +27,15 @@ public class SolarFlare extends AbstractTitheCard {
     public static final CardColor COLOR = Hierophant.Enums.COLOR_GOLD;
 
     private static final int COST = 5;
-    private static final int DAMAGE = 24;
-    private static final int UPGRADE_PLUS_DMG = 8;
+    private static final int DAMAGE = 20;
+    private static final int BLOCK = 12;
+    private static final int UPGRADE_PLUS_DMG = 5;
+    private static final int UPGRADE_PLUS_BLOCK = 4;
 
     public SolarFlare() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
+        baseBlock = BLOCK;
     }
 
     @Override
@@ -39,7 +43,7 @@ public class SolarFlare extends AbstractTitheCard {
         payTithe();
         if (p.hasPower(FervorPower.POWER_ID)) {
             int amount = p.getPower(FervorPower.POWER_ID).amount;
-            AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, amount * 2));
+            AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, (int) ceil((BLOCK * amount * 10 + 100)/ 100)));
         }
         AbstractDungeon.actionManager.addToBottom(new VFXAction(new WeightyImpactEffect(m.hb.cX, m.hb.cY)));
         AbstractDungeon.actionManager.addToBottom(
@@ -52,6 +56,7 @@ public class SolarFlare extends AbstractTitheCard {
         if (!upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_PLUS_DMG);
+            upgradeBlock(UPGRADE_PLUS_BLOCK);
         }
     }
 }

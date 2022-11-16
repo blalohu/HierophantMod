@@ -240,7 +240,7 @@
   },
   "hierophant:SolarFlare": {
     "NAME":"Solar Flare",
-    "DESCRIPTION": "Gain Block equal to twice your hierophant:Fervor. NL Deal !D! damage. NL hierophant:Tithe."
+    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL hierophant:Tithe. NL NL Block is affected by Fervor."
   },
   "hierophant:LocustPlague": {
     "NAME":"Locust Plague",
@@ -337,10 +337,14 @@
   "hierophant:AuricBeam": {
     "NAME":"Auric Beam",
     "DESCRIPTION": "Lose 20% of your Gold. NL Deal half that much damage.",
+<<<<<<< Updated upstream
     "UPGRADE_DESCRIPTION": "Lose 10% of your Gold. NL Deal that much damage",
     "EXTENDED_DESCRIPTION": [
       " NL (Deals !D! damage.)"
     ]
+=======
+    "EXTENDED_DESCRIPTION": " NL (Deals !D! damage.)"
+>>>>>>> Stashed changes
   },
   "hierophant:AuricShield": {
     "NAME":"Auric Shield",

@@ -75,7 +75,7 @@ public class FervorPower extends AbstractPower implements CloneablePowerInterfac
     public float atDamageGive(float damage, DamageInfo.DamageType type)
     {
         if (type == DamageInfo.DamageType.NORMAL) {
-            return (float) ceil(damage * (this.amount * 12.5 + 100)) / 100;
+            return (float) ceil(damage * (this.amount * 10 + 100)) / 100;
         }
         return damage;
     }
@@ -102,7 +102,7 @@ public class FervorPower extends AbstractPower implements CloneablePowerInterfac
 
     @Override
     public void updateDescription() {
-        description = DESCRIPTIONS[0] + amount * 12.5 + DESCRIPTIONS[1];
+        description = DESCRIPTIONS[0] + amount * 10 + DESCRIPTIONS[1];
     }
 
     @Override
