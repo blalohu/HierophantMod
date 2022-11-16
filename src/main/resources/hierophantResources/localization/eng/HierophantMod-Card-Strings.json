@@ -240,7 +240,7 @@
   },
   "hierophant:SolarFlare": {
     "NAME":"Solar Flare",
-    "DESCRIPTION": "Gain Block equal to twice your hierophant:Fervor. NL Deal !D! damage. NL hierophant:Tithe."
+    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL hierophant:Tithe. NL NL Block is affected by Fervor."
   },
   "hierophant:LocustPlague": {
     "NAME":"Locust Plague",
