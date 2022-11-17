@@ -336,15 +336,7 @@
   },
   "hierophant:AuricBeam": {
     "NAME":"Auric Beam",
-    "DESCRIPTION": "Lose 20% of your Gold. NL Deal half that much damage.",
-<<<<<<< Updated upstream
-    "UPGRADE_DESCRIPTION": "Lose 10% of your Gold. NL Deal that much damage",
-    "EXTENDED_DESCRIPTION": [
-      " NL (Deals !D! damage.)"
-    ]
-=======
-    "EXTENDED_DESCRIPTION": " NL (Deals !D! damage.)"
->>>>>>> Stashed changes
+    "DESCRIPTION": "Lose 20% of your Gold. NL Deal half that much damage."
   },
   "hierophant:AuricShield": {
     "NAME":"Auric Shield",

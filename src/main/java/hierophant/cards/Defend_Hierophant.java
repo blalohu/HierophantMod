@@ -34,6 +34,7 @@ public class Defend_Hierophant extends AbstractTitheCard {
     public Defend_Hierophant() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         this.baseBlock = 5;
+        this.tags.add(CardTags.STARTER_DEFEND);
         titheOnlyWhenUpgraded = true;
     }
 
@@ -51,6 +52,7 @@ public class Defend_Hierophant extends AbstractTitheCard {
     public void upgrade() {
         if (!upgraded) {
             this.upgradeName();
+            this.upgradeBlock(3);
             this.rawDescription = UPGRADE_DESCRIPTION;
             this.initializeDescription();
         }

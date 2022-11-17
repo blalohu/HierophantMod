@@ -38,6 +38,7 @@ public class Strike_Hierophant extends AbstractTitheCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
         tags.add(CardTags.STRIKE);
+        tags.add(CardTags.STARTER_STRIKE);
         titheOnlyWhenUpgraded = true;
     }
 
@@ -55,6 +56,7 @@ public class Strike_Hierophant extends AbstractTitheCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
+            this.upgradeDamage(3);
            this.rawDescription = UPGRADE_DESCRIPTION;
            initializeDescription();
         }

@@ -1,7 +1,5 @@
 package hierophant.cards;
 
-import static hierophant.HierophantMod.makeCardPath;
-
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -14,11 +12,12 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-
 import hierophant.HierophantMod;
 import hierophant.characters.Hierophant;
 import hierophant.effects.SmiteEffect;
 import hierophant.powers.PietyPower;
+
+import static hierophant.HierophantMod.makeCardPath;
 
 public class Smite extends AbstractDynamicCard {
     public static final String POWER_ID = HierophantMod.makeID("PietyPower");

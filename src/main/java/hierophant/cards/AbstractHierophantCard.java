@@ -1,10 +1,7 @@
 package hierophant.cards;
 
 import basemod.abstracts.CustomCard;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import hierophant.powers.DeathKnellPower;
 import hierophant.powers.EnlightenedPower;
 
 public abstract class AbstractHierophantCard extends CustomCard {

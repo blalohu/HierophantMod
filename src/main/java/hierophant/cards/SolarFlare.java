@@ -38,18 +38,25 @@ public class SolarFlare extends AbstractTitheCard {
         baseBlock = BLOCK;
     }
 
-    @Override
+    //@Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         payTithe();
-        if (p.hasPower(FervorPower.POWER_ID)) {
-            int amount = p.getPower(FervorPower.POWER_ID).amount;
-            AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, (int) ceil((BLOCK * amount * 10 + 100)/ 100)));
-        }
         AbstractDungeon.actionManager.addToBottom(new VFXAction(new WeightyImpactEffect(m.hb.cX, m.hb.cY)));
         AbstractDungeon.actionManager.addToBottom(
                 new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE));
-
+        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
     }
+    @Override
+    public void applyPowersToBlock() {
+        super.applyPowersToBlock();
+        int realBlock = this.block;
+        if (AbstractDungeon.player.hasPower(FervorPower.POWER_ID)) {
+            int amount = AbstractDungeon.player.getPower(FervorPower.POWER_ID).amount;
+            this.block = (int) (ceil(block * (amount * 10 + 100)) / 100);
+        }
+        isBlockModified = block != realBlock;
+    }
+
 
     @Override
     public void upgrade() {

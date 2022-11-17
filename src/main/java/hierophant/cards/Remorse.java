@@ -1,19 +1,21 @@
 package hierophant.cards;
 
-import static hierophant.HierophantMod.makeCardPath;
-import java.util.Iterator;
 import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import hierophant.HierophantMod;
 import hierophant.characters.Hierophant;
 import hierophant.tags.HierophantTags;
+
+import java.util.Iterator;
+
+import static hierophant.HierophantMod.makeCardPath;
 
 public class Remorse extends AbstractDynamicCard {
     public static final String ID = HierophantMod.makeID(Remorse.class.getSimpleName());
