@@ -1,23 +1,24 @@
 package hierophant.cards;
 
-import static hierophant.HierophantMod.makeCardPath;
-
-import java.util.Iterator;
-
 import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.GainPennyEffect;
-
 import hierophant.HierophantMod;
 import hierophant.characters.Hierophant;
 import hierophant.tags.HierophantTags;
+
+import java.util.Iterator;
+
+import static hierophant.HierophantMod.makeCardPath;
 
 public class GoldFever extends AbstractDynamicCard {
     public static final String ID = HierophantMod.makeID(GoldFever.class.getSimpleName());
@@ -62,6 +63,8 @@ public class GoldFever extends AbstractDynamicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.baseDamage = this.magicNumber * countDoubloons();
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AttackEffect.BLUNT_HEAVY));
+        AbstractDungeon.actionManager.addToTop(new VFXAction(
+                new GainPennyEffect(p.drawX - 400.0F, p.drawY + 800.0F * Settings.scale), 0.2f));
         this.rawDescription = (this.upgraded ? UPGRADE_DESCRIPTION : DESCRIPTION);
         this.initializeDescription();
     }

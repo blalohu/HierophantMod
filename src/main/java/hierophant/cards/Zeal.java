@@ -26,23 +26,26 @@ public class Zeal extends AbstractDynamicCard {
 
     private static final int COST = 1;
 
-    private static final int DAMAGE = 8;
+    private static final int DAMAGE = 12;
     private static final int UPGRADE_PLUS_DMG = 3;
+    public static int PIETY;
+
 
 
     public Zeal() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
+        piety = basePiety = PIETY;
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        int piety = 2*min(m.currentBlock, damage);
+        int PIETY = 2*min(m.currentBlock, damage);
         AbstractDungeon.actionManager.addToBottom(
             new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE));
-        if (piety > 0) {
+        if (PIETY > 0) {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
-                    new PietyPower(p, p, piety), piety));
+                    new PietyPower(p, p, PIETY), PIETY));
         }
     }
 
