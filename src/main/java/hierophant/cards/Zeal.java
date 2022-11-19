@@ -9,9 +9,11 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import hierophant.HierophantMod;
 import hierophant.characters.Hierophant;
+import hierophant.powers.EnlightenedPower;
 import hierophant.powers.PietyPower;
 
 import static hierophant.HierophantMod.makeCardPath;
+import static hierophant.powers.EnlightenedPower.PIETY_BONUS;
 import static java.lang.Integer.min;
 
 public class Zeal extends AbstractDynamicCard {
@@ -40,21 +42,26 @@ public class Zeal extends AbstractDynamicCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        int PIETY = 2*min(m.currentBlock, damage);
-        AbstractDungeon.actionManager.addToBottom(
-            new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE));
-        if (PIETY > 0) {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
-                    new PietyPower(p, p, PIETY), PIETY));
+            int PIETY = 2 * min(m.currentBlock, damage);
+                if (p.hasPower(EnlightenedPower.POWER_ID)) {
+                    PIETY = PIETY_BONUS * PIETY / 100; //This is a manual Enlightened override since for some reason
+            }                                          //the Enlightened Power in AbstractHierophantPower will not
+                                                       //interact with Zeal.
+            AbstractDungeon.actionManager.addToBottom(
+                    new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE));
+            if (PIETY > 0) {
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
+                        new PietyPower(p, p, PIETY), PIETY));
+            }
         }
-    }
 
-    @Override
-    public void upgrade() {
-        if (!upgraded) {
-            upgradeName();
-            upgradeDamage(UPGRADE_PLUS_DMG);
+
+        @Override
+        public void upgrade () {
+            if (!upgraded) {
+                upgradeName();
+                upgradeDamage(UPGRADE_PLUS_DMG);
+            }
         }
     }
-}
 

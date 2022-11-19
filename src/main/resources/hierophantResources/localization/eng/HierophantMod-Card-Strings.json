@@ -71,8 +71,8 @@
   },
   "hierophant:ChurchCoffers": {
     "NAME": "Church Coffers",
-    "DESCRIPTION": "Draw !M! cards. NL Gain [E] . NL hierophant:Tithe.",
-    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL Gain [E] [E]. NL hierophant:Tithe."
+    "DESCRIPTION": "Draw !M! cards. NL Gain [E] [E]. NL hierophant:Tithe. NL Exhaustive !stslib:ex!.",
+    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL Gain [E] [E] [E]. NL hierophant:Tithe. NL Exhaustive !stslib:ex!."
   },
   "hierophant:Invocation": {
     "NAME": "Invocation",
@@ -194,7 +194,7 @@
   },
   "hierophant:AuricForm": {
      "NAME":"Auric Form",
-    "DESCRIPTION": "At the start of your turn, lose !M!% of your gold, then gain half that much hierophant:Fervor and hierophant:Piety."
+    "DESCRIPTION": "At the start of your turn, lose !M! %A of your gold, then gain half that much hierophant:Fervor and hierophant:Piety."
   },
   "hierophant:CoinFling": {
     "NAME":"Coin Fling",
@@ -206,13 +206,15 @@
   },
   "hierophant:OrnateJavelin": {
     "NAME":"Ornate Javelin",
-    "DESCRIPTION": "Deal !D! damage. NL Exhaust. NL hierophant:Hoard !M!."
+    "DESCRIPTION": "Deal !D! damage. NL Exhaust. NL hierophant:Hoard !M!. NL Exhaustive !stslib:ex!."
   },
   "hierophant:Mercenaries": {
     "NAME":"Mercenaries",
     "DESCRIPTION": "Deal 1 damage per Gold lost this turn. NL hierophant:Tithe.",
     "UPGRADE_DESCRIPTION": "Deal 3 damage per 2 Gold lost this turn. NL hierophant:Tithe.",
-    "EXTENDED_DESCRIPTION": [" NL (Deals !D! damage.)"]
+    "EXTENDED_DESCRIPTION": [
+      " NL (Deals !D! damage.)"
+    ]
   },
   "hierophant:SearingVirtue": {
     "NAME":"Searing Virtue",
@@ -277,7 +279,7 @@
   "hierophant:Smite": {
     "NAME":"Smite",
     "DESCRIPTION": "Gain !hierophant:P! hierophant:Piety. NL Deal damage equal to half the hierophant:Piety gained this turn.",
-    "UPGRADE_DESCRIPTION": " NL (Deals !D! damage.)"
+    "UPGRADE_DESCRIPTION": " NL (Deals !D! damage.) NL Divide this by 2, sorry I don't have a way of automating this yet."
   },
   "hierophant:Upheaval": {
     "NAME":"Upheaval",
@@ -336,7 +338,11 @@
   },
   "hierophant:AuricBeam": {
     "NAME":"Auric Beam",
-    "DESCRIPTION": "Lose 20% of your Gold. NL Deal half that much damage."
+    "DESCRIPTION": "Lose 20% of your Gold. NL Deal half that much damage.",
+    "UPGRADE_DESCRIPTION": "Lose 10% of your Gold. NL Deal that much damage.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Deal !D! Damage)"
+    ]
   },
   "hierophant:AuricShield": {
     "NAME":"Auric Shield",

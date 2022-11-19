@@ -1,7 +1,6 @@
 package hierophant.cards;
 
-import static hierophant.HierophantMod.makeCardPath;
-
+import com.evacipated.cardcrawl.mod.stslib.variables.ExhaustiveVariable;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -10,10 +9,11 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-
 import hierophant.HierophantMod;
 import hierophant.characters.Hierophant;
 import hierophant.tags.HierophantTags;
+
+import static hierophant.HierophantMod.makeCardPath;
 public class OrnateJavelin extends AbstractDynamicCard {
 
     public static final String ID = HierophantMod.makeID(OrnateJavelin.class.getSimpleName());
@@ -28,8 +28,9 @@ public class OrnateJavelin extends AbstractDynamicCard {
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 
     private static final int COST = 2;
+    private static final int UPGRADED_COST = 1;
     private static final int DAMAGE = 18;
-    private static final int UPGRADE_PLUS_DAMAGE = 6;
+    //private static final int UPGRADE_PLUS_DAMAGE = 6;
     private static final int MAGIC = 4;
     private static final int UPGRADE_PLUS_MAGIC = 2;
 
@@ -40,6 +41,7 @@ public class OrnateJavelin extends AbstractDynamicCard {
         tags.add(HierophantTags.HIEROPHANT_HOARD);
         this.exhaust = true;
         tags.add(CardTags.HEALING); // To prevent generation
+        ExhaustiveVariable.setBaseValue(this, 2);
     }
 
     @Override
@@ -53,7 +55,7 @@ public class OrnateJavelin extends AbstractDynamicCard {
         if (!upgraded) {
             upgradeName();
             upgradeMagicNumber(UPGRADE_PLUS_MAGIC);
-            upgradeDamage(UPGRADE_PLUS_DAMAGE);
+            this.upgradeBaseCost(UPGRADED_COST);
             initializeDescription();
         }
     }

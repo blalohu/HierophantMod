@@ -65,7 +65,6 @@ public class Smite extends AbstractDynamicCard {
         int combinedDamage = piety + HierophantMod.pietyGainedThisTurn;
         this.baseDamage = combinedDamage;
         super.applyPowers();
-
         this.rawDescription = DESCRIPTION;
         this.rawDescription += UPGRADE_DESCRIPTION;
         initializeDescription();
